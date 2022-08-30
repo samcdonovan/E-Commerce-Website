@@ -1,0 +1,1115 @@
+/* Comments in this document will explain styling that we believe to be important, therefore we will
+not explain individual positioning or styling e.t.c and only explain sections that we think need
+explaining or justification */
+
+/* the font we have chosen for this website is Arial due to it being easily recognisable
+    and nice to look at. It is also recommended as a good font to use to help those with dyslexia. */
+
+* {
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+html {
+    position: absolute;
+    clear: both;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* the colour scheme we have chosen for this website is a pastel scheme, with the header and footer
+            using a pastel blue colour, and the navigation bar using black and pastel pink.
+            We chose this scheme because we feel that it is welcoming and also stylish. */
+
+body {
+    background-color: #FDFDFC;
+    min-height: 100%;
+    margin: auto;
+}
+
+div h1 {
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+/* PHP FUNCTIONS */
+
+/*HEADER*/
+
+/* colour for the whole header and footer; beige */
+
+header, footer {
+    background-color: #d1e8e8;
+}
+
+/* empty div; adds more space in the header */
+
+.title {
+    height: 55px;
+}
+
+/* logo styling; sets position to the top left of the page and in the header; */
+
+.logo, .logo img {
+    position: absolute;
+    float: left;
+    width: 230px;
+    height: 230px;
+    top: -25px;
+    left: 80px;
+}
+
+/* searchBar styling; positioned in top-right of page */
+
+.searchBar {
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    right: 20px;
+    border: none;
+    font-size: 20px;
+}
+
+.searchBar div {
+    display: inline-block;
+    height: 40px;
+    border-style: solid;
+    margin-top: -20px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.searchBar input[type=text] {
+    padding: 6px;
+    height: 35px;
+    width: 250px;
+}
+
+.searchBar input[type=image] {
+    float: right;
+    width: 35px;
+    height: 35px;
+}
+
+/* basket that sits in the top right of the page */
+
+.headerBasket {
+    position: absolute;
+    width: 170px;
+    height: 100px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.headerBasket a {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.headerBasket img {
+    width: 35px;
+    height: 35px;
+    margin-top: -10px;
+}
+
+/* navigation bar styling; position is middle of the header */
+
+.navBar {
+    margin-top: 20px;
+    padding: 13px;
+    text-align: center;
+}
+
+.navBar .home {
+    border-style: none;
+}
+
+.navBar a {
+    color: black;
+    margin-left: -2px;
+    padding: 10px;
+    border-left-style: solid;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* navigation bar icons styling; positioned to the right of their respective links */
+
+.navBar img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    margin-top: 4px;
+    top: 5px;
+    text-align: center;
+}
+
+.navBar a:visited {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+/* .current changes the colour of the background on the 
+        navigation bar for the page that the user is currently on; */
+
+.current {
+    background-color: #e8d1d1;
+    border-style: solid;
+}
+
+/* visibility styling for login popup error */
+
+#loginError .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* ------------------------------------------------ */
+
+/* FOOTER */
+
+/* footer styling; footer stays at the bottom of the screen at all times,
+        regardless of how much content there is on the page */
+
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 20%;
+    margin-bottom: -50px;
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/* universal font-size for the footer */
+
+footer p, a {
+    font-size: 14px;
+}
+
+footer h {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+/* subscribe section; input box with a "SUBSCRIBE" button next to it;
+            positioned in the bottom left of the footer */
+
+.signUp {
+    position: relative;
+    width: 370px;
+    margin-left: 40px;
+}
+
+.signUp p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.signUp input[type=text] {
+    width: 240px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+/* button is rounded and a similar colour to the navBar for consistency */
+
+.signUp button {
+    background-color: #e8d1d1;
+    width: 120px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* about us section in footer; positioned to the right of the footer */
+
+.footerAbout {
+    position: absolute;
+    bottom: 18px;
+    right: 180px;
+    text-align: left;
+}
+
+.footerAbout p {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* navigation list/quicklinks in footer; positioned in the far right of the footer */
+
+.quickLinks {
+    float: right;
+    padding: 0px;
+}
+
+.quickLinks ul {
+    margin: auto;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.quickLinks li {
+    height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+/* font stays the same colour if link has been visited */
+
+.gameInfo, li, #successMessage a:visited {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+/* social media section in footer;
+        contains relevant social media icons that are links to their respective websites */
+
+.socials {
+    position: absolute;
+    width: 16%;
+    left: 42%;
+    bottom: 60px;
+    padding: 0px;
+    border-style: none;
+}
+
+.socials h {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.socials img {
+    float: left;
+    padding-right: 10px;
+    width: 60px;
+    height: 50px;
+}
+
+/* policies section in the footer; contains privacy policy, sitemap and copyright info */
+
+.policies {
+    position: absolute;
+    width: 25%;
+    left: 37.5%;
+    bottom: 10px;
+    padding: 0px;
+    border-style: solid;
+    text-align: center;
+}
+
+.policies p {
+    margin: auto;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+/* INDEX PAGE */
+
+/* slideshow to welcome the customers, on the home page*/
+
+.slideshow {
+    position: relative;
+    width: 65%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 25px;
+}
+
+.slideshowText a {
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 4px;
+}
+
+.slideshowText {
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 350px;
+    height: 180px;
+    top: 50px;
+    left: 50px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slides, .slide {
+    position: relative;
+    border-style: solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    flex-shrink: 0;
+}
+
+.slideshow img {
+    width: inherit;
+    height: inherit;
+}
+
+/* next and previous buttons on slideshow */
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: none;
+    font-size: 50px;
+}
+
+/* position the "next button" to the right */
+
+.next {
+    right: 0;
+}
+
+/* styling for popular brands section on home page */
+
+.popBrands {
+    position: relative;
+    width: 1100px;
+    font-size: 40px;
+    left: 350px;
+    margin-bottom: 100px;
+}
+
+.popBrands img {
+    width: 150px;
+    margin-right: 50px;
+}
+
+/* ------------------------------------------------ */
+
+/* PRODUCTS PAGE */
+
+/* banner that sits at the top of the shop page */
+
+.shopBanner {
+    text-align: center;
+    color: white;
+    width: 910px;
+    background-image: url("../images/productBackground.png");
+    opacity: 0.9;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* sort options which sits above the products */
+
+.sort {
+    text-align: center;
+    width: 500px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: grey;
+}
+
+.sort button {
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 150px;
+    height: 30px;
+}
+
+.sort p {
+    font-size: 30px;
+}
+
+/* products; organised by columns and rows */
+
+.products, .recommendations {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.recommendations {
+    padding: 20px;
+    border-style: solid;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.recommendations #recommendText {
+    font-size: 25px;
+}
+
+.recommendations .column {
+    width: 20%
+}
+
+.column img {
+    width: 100%;
+}
+
+.row {
+    clear: both;
+    width: 1200px;
+}
+
+.products .productBasket {
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+.recommendations .productBasket {
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+/* ------------------------------------------------ */
+
+/* PROFILE PAGE */
+
+/* styling for the 3 profile page options */
+
+.noAccount, .staff, .login {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    width: 400px;
+    height: 250px;
+    top: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #d1e8e8;
+}
+
+.noAccount {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.staff {
+    float: right;
+    top: -150px;
+    margin-right: 100px;
+}
+
+.login {
+    font-size: 20px;
+    margin-left: 100px;
+    float: left;
+}
+
+/* styling for the buttons in each option */
+
+.login button, .noAccount button, .staff button {
+    font-size: 30px;
+    margin-top: 25px;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.login label {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+/* after a customer has successfully logged in, profileInfo is displayed */
+
+.profileInfo {
+    text-align: center;
+    position: relative;
+    border-style: solid;
+    width: 500px;
+    height: 700px;
+    top: -190px;
+    left: 175px;
+    padding: 15px;
+    margin-bottom: -50px;
+}
+
+.profileInfo p {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.profileInfo img {
+    width: 240px;
+    height: 240px;
+    position: relative;
+}
+
+.profileInfo button {
+    font-size: 30px;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    box-sizing: border-box;
+    top: -10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit {
+    width: 500px;
+    height: 700px;
+    top: 200px;
+    left: 175px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    padding-top: 10px;
+    padding: 20px;
+}
+
+.edit label {
+    display: inline-block;
+    text-align: left;
+    height: 15px;
+    font-size: 30px;
+}
+
+.edit div {
+    margin-bottom: 40px;
+}
+
+.edit p {
+    font-size: 30px;
+}
+
+.edit input {
+    float: right;
+    height: 30px;
+    width: 250px;
+}
+
+/* basic table that shows the users orders and other relative information */
+
+table {
+    display: block;
+    position: relative;
+    width: 600px;
+    top: -830px;
+    right: 80px;
+    float: right;
+    overflow: hidden;
+}
+
+caption {
+    width: inherit;
+    border-style: solid;
+    font-size: 50px;
+}
+
+table, th, td, tr {
+    border: 2px solid #575858;
+    border-style: solid;
+}
+
+th {
+    background: white;
+    padding: 15px;
+    padding-left: 5px;
+    font-size: 30px;
+}
+
+tbody {
+    /*width: inherit;*/
+    top: 150px;
+    display: block;
+    overflow-x: scroll;
+    background-image: url("../images/ordersBackground.png");
+}
+
+th, td {
+    width: auto;
+}
+
+tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    color: white;
+    text-align: center;
+}
+
+.highlighted td {
+    color: lightcoral;
+}
+
+/* ------------------------------------------------ */
+
+/* ABOUT US PAGE */
+
+/* short paragraph explaining the company behind the website */
+
+.projectAims {
+    position: relative;
+    float: left;
+    width: 600px;
+    height: 400px;
+    left: 50px;
+    top: 130px;
+    margin: 10px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-style: solid;
+    font-size: 20px;
+    text-align: left;
+}
+
+.projectAims p {
+    padding: 10px;
+}
+
+/* contact box that contains relevant contact information and a map showing the address of
+            Middlesex University */
+
+.contact {
+    position: relative;
+    float: right;
+    width: 530px;
+    top: 0px;
+    margin-right: 150px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.contact p {
+    float: inline-start;
+    width: 220px;
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email, .phone {
+    width: 350px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.email img {
+    float: left;
+    height: 60px;
+    width: 80px;
+}
+
+.phone img {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+.address {
+    margin-top: 25px;
+    width: 380px;
+    height: 150px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address p {
+    width: inherit;
+    height: inherit;
+}
+
+/* placeholder image for a map that I will create using JavaScript */
+
+.mapPlaceholder {
+    position: relative;
+    float: right;
+    width: 500px;
+    height: 300px;
+}
+
+.mapPlaceholder img {
+    border-style: solid;
+    width: 500px;
+    height: 300px;
+}
+
+/* ------------------------------------------------ */
+
+/* REGISTER PAGE */
+
+/* register form that shows if the user chooses registration on the profile page */
+
+.register {
+    visibility: visible;
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    padding-top: 10px;
+    padding: 20px;
+    font-size: 120%;
+    border-style: solid;
+}
+
+#registerHeader {
+    margin-top: 35px;
+}
+
+.register p {
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* styling to put a red star next to the fields that are required */
+
+.required {
+    color: red;
+}
+
+.register label {
+    display: inline-block;
+    text-align: left;
+    height: 15px;
+}
+
+.register div {
+    margin-bottom: 30px;
+}
+
+.register input {
+    float: right;
+}
+
+.register button, .edit button {
+    position: relative;
+    width: 60%;
+    left: 60px;
+    font-size: 20px;
+    bottom: -15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.popup {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+
+.popup .feedback {
+    visibility: hidden;
+    width: 143px;
+    background-color: rgb(235, 63, 63);
+    font-size: 10px;
+    border-color: red;
+    text-align: center;
+    border-radius: 3px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 230px;
+    margin-left: -80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Popup arrow */
+
+.popup .feedback::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    transform: rotate(-180deg);
+}
+
+.popup #passwordError {
+    left: 100px;
+    top: 20px;
+    width: 190px;
+}
+
+.popup #loginError {
+    position: absolute;
+    left: -10px;
+    top: 53px;
+}
+
+.popup p {
+    position: relative;
+    height: inherit;
+    margin-top: -3px;
+    margin: 4px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup .show {
+    visibility: visible;
+    margin-bottom: 10px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.success {
+    width: 600px;
+    visibility: hidden;
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    top: 250px;
+    left: 452px
+}
+
+#successMessage a {
+    font-size: 32px;
+}
+
+.success .show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.recommendations.hide {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* ------------------------------------------------ */
+
+/* BASKET PAGE */
+
+/* styling for the basket on the basket page */
+
+#basketCheckout {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 60px;
+    width: 700px;
+    margin-bottom: 200px;
+}
+
+.basket p {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.basket img {
+    float: left;
+    width: 250px;
+    height: 180px;
+    padding: 10px;
+    margin-top: -3px;
+}
+
+/* styling for the items in the basket */
+
+.item {
+    width: 700px;
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+.itemInfo {
+    position: relative;
+    width: 300px;
+    float: left;
+}
+
+.itemInfo p {
+    font-size: 20px;
+    margin-bottom: -29px;
+}
+
+.quantity {
+    width: 200px;
+    height: inherit;
+    position: relative;
+    left: 550px;
+    top: -150px;
+    margin-bottom: -120px;
+}
+
+.basket .header {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    border-bottom: solid;
+    height: 60px;
+    margin-top: -5px;
+}
+
+/* checkout section styling */
+
+.checkout {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: none;
+    border-style: solid;
+}
+
+.checkout button {
+    position: relative;
+    font-size: 35px;
+    width: 400px;
+    height: 50px;
+    left: 50px;
+    margin-bottom: 10px;
+}
+
+.totalsText {
+    float: left;
+    margin-left: 20px;
+}
+
+.totals {
+    float: right;
+    margin-right: 20px;
+}
+
+#checkoutForm {
+    position: absolute;
+    width: 500px;
+    margin: 0 auto;
+    left: 530px;
+    top: 300px;
+    height: 400px;
+    padding-top: 10px;
+    padding: 20px;
+    font-size: 120%;
+    border-style: solid;
+}
+
+#checkoutForm div {
+    position: relative;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#checkoutForm label {
+    display: inline-block;
+    text-align: left;
+    height: 15px;
+}
+
+#checkoutForm input {
+    float: right;
+    height: 35px;
+    width: 200px;
+}
+
+#checkoutForm button {
+    position: relative;
+    font-size: 35px;
+    width: 300px;
+    height: 50px;
+    left: 25px;
+    margin-top: 45px;
+}
+
+#confirmation {
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    border-style: solid;
+    width: 800px;
+    left: 350px;
+    top: 200px;
+}
+
+/* ------------------------------------------------ */
+
+/* CMS */
+
+/* generic box to act as a placholder for all CMS functions */
+
+.cms {
+    border-style: solid;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
